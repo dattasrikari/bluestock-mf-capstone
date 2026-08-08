@@ -44,7 +44,3 @@ reports/ - final report and presentation
 
 ## Author
 Datta Srikari — Bluestock Fintech Capstone, 2026
-
-git add README.md
-git commit -m "Complete README content"
-git push
