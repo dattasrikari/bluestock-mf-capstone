@@ -35,12 +35,11 @@ reports/ - final report and presentation
 
 ## Status
 - [x] Day 1: Data ingestion
-- [ ] Day 2: Data cleaning + SQL database design (in progress)
+- [x] Day 2: Data cleaning + SQL database design
 - [ ] Day 3: EDA
 - [ ] Day 4: Performance analytics
 - [ ] Day 5: Dashboard
 - [ ] Day 6: Advanced analytics
 - [ ] Day 7: Final report
-
 ## Author
 Datta Srikari — Bluestock Fintech Capstone, 2026
