@@ -36,7 +36,7 @@ reports/ - final report and presentation
 ## Status
 - [x] Day 1: Data ingestion
 - [x] Day 2: Data cleaning + SQL database design
-- [ ] Day 3: EDA
+- [x] Day 3: EDA
 - [ ] Day 4: Performance analytics
 - [ ] Day 5: Dashboard
 - [ ] Day 6: Advanced analytics
