@@ -33,7 +33,34 @@ reports/ - final report and presentation
    python scripts/live_nav_fetch.py
    python scripts/clean_nav.py
 
-## Exploratory Data Analysis (Day 3)
+## Day 1: Project Setup + Data Ingestion 
+
+Set up the project environment and ingested all provided datasets plus live NAV data.
+
+**What was done:**
+- Created project folder structure (data/raw, data/processed, notebooks, scripts, sql, dashboard, reports, charts)
+- `scripts/data_ingestion.py` — loaded all 10 provided CSV datasets, validated shapes/dtypes
+- `scripts/live_nav_fetch.py` — fetched live historical NAV data from the mfapi.in API for 6 real schemes: HDFC Top 100 (125497), SBI Bluechip (119551), ICICI Bluechip (120503), Nippon Large Cap (118632), Axis Bluechip (119092), Kotak Bluechip (120841)
+- `scripts/validate_codes.py` — cross-checked all AMFI codes in fund_master against nav_history (0 mismatches found)
+
+**Deliverables:** Project repo initialized on GitHub, `data_ingestion.py`, `live_nav_fetch.py`, `validate_codes.py`, raw CSVs in `data/raw/`
+
+---
+
+## Day 2: Data Cleaning + SQL Database Design 
+
+Cleaned all datasets and built a 5-table SQLite star schema.
+
+**What was done:**
+- `scripts/clean_nav.py`, `clean_transactions.py`, `clean_performance.py` — cleaned and validated the 3 core datasets, output to `data/processed/`
+- Built SQLite schema (`sql/schema.sql`): `dim_fund`, `fact_nav`, `fact_transactions`, `fact_performance`, `fact_aum`
+- `scripts/create_schema.py` and `scripts/load_db.py` — created and loaded the schema into `data/db/bluestock_mf.db` (dim_fund: 40 rows, fact_nav: 64,320 rows, fact_transactions: 32,778 rows, fact_performance: 40 rows, fact_aum: 90 rows)
+- Wrote and ran 10 analytical SQL queries (`sql/queries.sql`, `scripts/run_queries.py`)
+- Documented all tables and columns in `reports/data_dictionary.md`
+
+**Deliverables:** 3 cleaned CSVs, `bluestock_mf.db`, `schema.sql`, `queries.sql`, `data_dictionary.md`
+
+## Day 3: Exploratory Data Analysis 
 Full EDA notebook: `notebooks/EDA_Analysis.ipynb`. Charts exported to `charts/`.
 
 **Key findings**
@@ -48,7 +75,7 @@ Full EDA notebook: `notebooks/EDA_Analysis.ipynb`. Charts exported to `charts/`.
 - Banking, IT, and Pharma are the top 3 sector exposures, ~45% of holdings combined
 - Heavy Liquid-fund inflows + low fund correlation suggest cautious, short-term capital parking rather than long-term equity conviction
 
-## Performance Analytics (Day 4)
+## Day 4: Performance Analytics 
 Full analytics notebook: `notebooks/Performance_Analytics.ipynb`. Deliverables saved to `reports/`.
 
 **Metrics computed for all 40 funds:**
@@ -87,7 +114,7 @@ Built an interactive 5-page Power BI dashboard covering the full mutual fund ana
 
 **Deliverables:** `dashboard/bluestock_mf_dashboard.pbix`, `dashboard/Dashboard.pdf`, 4 page PNG exports
 
-## Day 6: Advanced Analytics + Risk Metrics ✅
+## Day 6: Advanced Analytics + Risk Metrics 
 
 Extended the analytics layer with risk metrics, cohort behavior, and a simple recommendation engine.
 
