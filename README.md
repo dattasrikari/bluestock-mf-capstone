@@ -87,13 +87,27 @@ Built an interactive 5-page Power BI dashboard covering the full mutual fund ana
 
 **Deliverables:** `dashboard/bluestock_mf_dashboard.pbix`, `dashboard/Dashboard.pdf`, 4 page PNG exports
 
+## Day 6: Advanced Analytics + Risk Metrics ✅
+
+Extended the analytics layer with risk metrics, cohort behavior, and a simple recommendation engine.
+
+**Analyses performed (`notebooks/Advanced_Analytics.ipynb`):**
+- **Historical VaR & CVaR (95%)** per fund — Small/Mid Cap equity funds carry the highest downside risk (ABSL Small Cap worst at -2.39% VaR)
+- **Rolling 90-day Sharpe ratio** for 5 selected funds — reveals Liquid funds persistently underperforming the risk-free rate while Small Cap funds oscillate around/above zero
+- **Investor cohort analysis** by first transaction year — tracks investor count, average SIP amount, and category preference per cohort
+- **SIP continuity analysis** — flags at-risk investors by transaction gap; recalibrated the brief's fixed 35-day threshold to a relative (top 25%) measure after finding this dataset's actual median SIP gap (64.7 days) made the literal threshold non-informative
+- **Fund recommendation engine** (`scripts/recommender.py`) — recommends top 3 funds by Sharpe ratio matched to investor risk appetite (Low/Moderate/High)
+- **Sector concentration (HHI)** per equity fund — Axis Bluechip Fund is most concentrated (HHI 0.297)
+
+**Deliverables:** `notebooks/Advanced_Analytics.ipynb`, `reports/var_cvar_report.csv`, `reports/cohort_analysis.csv`, `reports/sip_continuity.csv`,
+
 ## Status
 - [x] Day 1: Data ingestion
 - [x] Day 2: Data cleaning + SQL database design
 - [x] Day 3: EDA
 - [x] Day 4: Performance analytics
 - [x] Day 5: Dashboard
-- [ ] Day 6: Advanced analytics
+- [x] Day 6: Advanced analytics
 - [ ] Day 7: Final report
 ## Author
 Datta Srikari — Bluestock Fintech Capstone, 2026
