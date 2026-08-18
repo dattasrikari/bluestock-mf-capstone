@@ -68,12 +68,31 @@ Full analytics notebook: `notebooks/Performance_Analytics.ipynb`. Deliverables s
 - `reports/tracking_error.csv`
 - `charts/benchmark_comparison_top5.png`
 
+## Day 5: Dashboard Development 
+
+Built an interactive 5-page Power BI dashboard covering the full mutual fund analytics platform.
+
+**Pages:**
+- **Industry Overview** — KPI cards (Total AUM, SIP Inflows, Folios, Schemes), AUM growth trend, AUM by AMC
+- **Fund Performance** — Fund scorecard, Risk vs Return scatter, NAV vs Benchmark comparison, slicers (fund house, category, plan)
+- **Investor Analytics** — Transaction amount by state, SIP/Lumpsum/Redemption split, age group SIP averages, monthly transaction volume, slicers (state, age group, city tier)
+- **SIP & Market Trends** — SIP inflow vs Nifty 50 dual-axis chart, category inflows heatmap, top 5 categories by net inflow
+- **NAV Detail** (interactive sub-page) — fund-level NAV history, accessible via "View NAV Detail" button from Fund Performance page
+
+**Features:**
+- Interactive navigation button (Fund Performance → NAV Detail) with fund selector
+- Tooltips enabled across all visuals
+- Custom Bluestock branding (logo + themed color palette) on every page
+- Built a monthly-aggregated benchmark index table via Power Query to relate SIP inflow data with daily Nifty 50 data
+
+**Deliverables:** `dashboard/bluestock_mf_dashboard.pbix`, `dashboard/Dashboard.pdf`, 4 page PNG exports
+
 ## Status
 - [x] Day 1: Data ingestion
 - [x] Day 2: Data cleaning + SQL database design
 - [x] Day 3: EDA
 - [x] Day 4: Performance analytics
-- [ ] Day 5: Dashboard
+- [x] Day 5: Dashboard
 - [ ] Day 6: Advanced analytics
 - [ ] Day 7: Final report
 ## Author
