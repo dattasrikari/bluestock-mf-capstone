@@ -126,7 +126,22 @@ Extended the analytics layer with risk metrics, cohort behavior, and a simple re
 - **Fund recommendation engine** (`scripts/recommender.py`) — recommends top 3 funds by Sharpe ratio matched to investor risk appetite (Low/Moderate/High)
 - **Sector concentration (HHI)** per equity fund — Axis Bluechip Fund is most concentrated (HHI 0.297)
 
-**Deliverables:** `notebooks/Advanced_Analytics.ipynb`, `reports/var_cvar_report.csv`, `reports/cohort_analysis.csv`, `reports/sip_continuity.csv`,
+**Deliverables:** `notebooks/Advanced_Analytics.ipynb`, `reports/var_cvar_report.csv`, `reports/cohort_analysis.csv`, `reports/sip_continuity.csv`
+
+## Day 7: Final Report + Presentation
+
+Wrote the final project report and built the closing presentation deck, pulling together the metrics and findings from Days 1–6 into submission-ready deliverables.
+
+**What was done:**
+- `reports/Final_Report.pdf` — 16-page final report covering Executive Summary, Data Sources, ETL Design, EDA Findings, Performance Analysis, Dashboard, Limitations, and Recommendations
+- `Bluestock_MF_Presentation.pptx` — 12-slide closing deck: title, problem & objective, data sources, architecture, EDA highlights (×2), performance metrics (×2), dashboard screenshots (×2), key findings, thank you
+- `run_pipeline.py` — master orchestration script chaining the full ETL sequence: ingestion → validation → schema creation → cleaning → load → queries
+- `Self_Review_Checklist.md` — final pass confirming all 8 project objectives and 7 deliverables were met before submission
+- Final GitHub push and `v1.0` tag
+
+**Note:** the dashboard visuals in the report and deck are recreated from the underlying analysis data rather than direct Power BI exports — swap in the PNGs from `dashboard/` before final submission if a fresher export is available.
+
+**Deliverables:** `Final_Report.pdf`, `Bluestock_MF_Presentation.pptx`, `run_pipeline.py`, updated `README.md`, `Self_Review_Checklist.md`
 
 ## Status
 - [x] Day 1: Data ingestion
@@ -135,6 +150,6 @@ Extended the analytics layer with risk metrics, cohort behavior, and a simple re
 - [x] Day 4: Performance analytics
 - [x] Day 5: Dashboard
 - [x] Day 6: Advanced analytics
-- [ ] Day 7: Final report
+- [x] Day 7: Final report
 ## Author
 Datta Srikari — Bluestock Fintech Capstone, 2026
